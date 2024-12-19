@@ -150,6 +150,25 @@
         <p>&copy; 2024 Affordable Picks Kenya. All Rights Reserved.</p>
     </div>
 </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all FAQ questions
+        const questions = document.querySelectorAll(".faq-item .question");
+
+        questions.forEach((question) => {
+            question.addEventListener("click", function () {
+                // Toggle the associated answer's visibility
+                const answer = this.nextElementSibling;
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
 
